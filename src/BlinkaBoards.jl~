@@ -1,0 +1,5 @@
+module BlinkaBoards
+
+greet() = print("Hello World!")
+
+end # module BlinkaBoards
