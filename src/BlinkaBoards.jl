@@ -2,7 +2,7 @@ module BlinkaBoards
 
 using PyCall
 
-export BlinkaBoard
+export BlinkaBoard, i2c
 
 """
 ```julia
@@ -29,7 +29,7 @@ i2c(blinka)
 Get the i2c channel of a `BlinkaBoard`
 """
 function i2c(b::BlinkaBoard)
-    b.board.i2c
+    b.board.I2C()
 end
 
 end # module BlinkaBoards
