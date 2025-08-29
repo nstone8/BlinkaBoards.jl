@@ -70,6 +70,7 @@ Set a `DigitalIOPin` as an input
 """
 function setinput!(pin::DigitalIOPin)
     pin.pin.direction = pin.board.digitialio.Direction.INPUT
+    return nothing
 end
 
 """
@@ -80,6 +81,7 @@ Set a `DigitalIOPin` as an output
 """
 function setoutput!(pin::DigitalIOPin)
     pin.pin.direction = pin.board.digitialio.Direction.OUTPUT
+    return nothing
 end
 
 """
@@ -118,6 +120,7 @@ Write a value to a `DigitalIOPin`
 function digitalwrite!(pin::DigitalIOPin,value::Bool)
     @assert isoutput(pin)
     pin.pin.value = value
+    return nothing
 end
 
 end # module BlinkaBoards
